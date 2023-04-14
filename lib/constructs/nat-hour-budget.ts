@@ -14,10 +14,15 @@ export class NatHourBudget extends Construct {
         budget: {
             budgetLimit: {
                 amount: props.NatBudgetAmount,
-                unit: 'HOURS'
+                unit: 'Hrs'
             },
             budgetName: 'NatHourBudget',
             budgetType: 'USAGE',
+            costFilters: {
+                "UsageTypeGroup": [
+                    "EC2: NAT Gateway - Running Hours"
+                    ]
+            },
             timeUnit: 'DAILY'            
         },
         notificationsWithSubscribers: [
