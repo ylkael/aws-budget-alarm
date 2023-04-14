@@ -1,13 +1,13 @@
 import * as budgets from 'aws-cdk-lib/aws-budgets';
 import { Construct } from 'constructs';
 
-interface NatHourBudgetProps {
+interface BudgetProps {
     NatBudgetAmount: number,
     emailaddress: string,
 }
 
-export class NatHourBudgets extends Construct {
-  constructor(scope: Construct, id: string, props: NatHourBudgetProps) {
+export class NatHourBudget extends Construct {
+  constructor(scope: Construct, id: string, props: BudgetProps) {
     super(scope, id);
 
     new budgets.CfnBudget(this, 'NatHourBudget', {

@@ -1,16 +1,26 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { DailyBudget } from './constructs/daily-budget';
+import { NatHourBudget } from './constructs/nat-hour-budget';
 
-export class AwsBudgetsStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+interface BudgetStackProps extends cdk.StackProps{
+    DailyBudgetAmount: number,
+    NatBudgetAmount: number,
+    emailaddress: string
+}
+
+export class AwsBudgetStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props: BudgetStackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'AwsBudgetsQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    new DailyBudget(this, 'DailyBudget', {
+        DailyBudgetAmount: props.DailyBudgetAmount,
+        emailaddress: props.emailaddress
+        }); 
+    
+    new NatHourBudget(this, 'NatHourBudget', {
+        NatBudgetAmount: props.NatBudgetAmount,
+        emailaddress: props.emailaddress
+        });
   }
 }
