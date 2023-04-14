@@ -8,5 +8,5 @@ const app = new cdk.App();
 new AwsBudgetStack (app, 'AWSBudgetStack', {
   DailyBudgetAmount: 0.01,
   NatBudgetAmount: 0.5,
-  emailaddress: 'ylkael@hotmail.com'
+  emailaddress: 'aws-ylkael@hotmail.com'
 });
