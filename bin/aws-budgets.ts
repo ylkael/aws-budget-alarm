@@ -5,7 +5,7 @@ import { AwsBudgetStack } from '../lib/aws-budgets-stack';
 
 const app = new cdk.App();
 
-new AwsBudgetStack (app, 'AWSBudgetStack', {
+new AwsBudgetStack (app, 'AwsBudgetStack', {
   DailyBudgetAmount: 0.01,
   NatBudgetAmount: 0.5,
   emailaddress: 'aws-ylkael@hotmail.com'
