@@ -29,7 +29,7 @@ export class DailyBudget extends Construct {
                 },
                 subscribers: [
                     {
-                        // The email is set in the bin\aws-budget.ts file
+                        // The email address is set in the bin\aws-budget.ts file
                         address: props.emailaddress,
                         subscriptionType: 'EMAIL',
                     }, 
