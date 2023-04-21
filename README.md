@@ -17,4 +17,6 @@ Defines the values for Budget to use
 &nbsp;
 
 ```
-Note: The Budget Alarm checks the budget daily, so the notification will not be in real time when the alert threshold is exceeded, therefore the bill might be more than 0.01 USD when receiving the notification.
+Note: The Budget Alarm checks the budget daily, so the notification will not be in real time when the alert threshold is exceeded.  
+Therefore the bill might be more than 0.01 USD when receiving the notification.
+```
