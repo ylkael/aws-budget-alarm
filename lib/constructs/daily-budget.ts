@@ -11,6 +11,7 @@ export class DailyBudget extends Construct {
     new budgets.CfnBudget(this, 'DailyBudget', {
         budget: {
             budgetLimit: {
+                // The amount is set in the bin\aws-budget.ts file
                 amount: props.DailyBudgetAmount,
                 unit: 'USD'
             },
@@ -28,6 +29,7 @@ export class DailyBudget extends Construct {
                 },
                 subscribers: [
                     {
+                        // The email is set in the bin\aws-budget.ts file
                         address: props.emailaddress,
                         subscriptionType: 'EMAIL',
                     }, 
