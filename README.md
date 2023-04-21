@@ -2,8 +2,6 @@
 
 ### This budget notifies you once your spending exceeds 0.01 USD, which is above the AWS Free Tier limits.  
 
-&nbsp;
-
 Content:
 * `lib/constructs/daily-budget.ts`   
 Defines the specs to use with Budget  
@@ -12,8 +10,8 @@ Defines the specs to use with Budget
 Defines the Budget Stack  
 
 * `bin/aws-budget.ts`    
-Defines the values for Budget to use  
- 
+Defines the values for Budget to use   
+
 &nbsp;
 
 ```
