@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project
+# Create a zero spend Budget Alarm
 
-This is a blank project for CDK development with TypeScript.
+### This budget notifies you once your spending exceeds 0.01 USD, which is above the AWS Free Tier limits.  
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+&nbsp;
 
-## Useful commands
+Content:
+* `lib/constructs/daily-budget.ts`   
+Defines the specs to use with Budget  
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+* `lib/aws-budget-stack.ts`   
+Defines the Budget Stack  
+
+* `bin/aws-budget.ts`    
+Defines the values for Budget to use  
+ 
+&nbsp;
+
+```
+Note: The Budget Alarm checks the budget daily, so the notification will not be in real time when the alert threshold is exceeded, therefore the bill might be more than 0.01 USD when receiving the notification.
