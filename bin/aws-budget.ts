@@ -7,5 +7,6 @@ const app = new cdk.App();
 
 new AwsBudgetStack (app, 'AwsBudgetStack', {
   DailyBudgetAmount: 0.01,
-  emailaddress: 'your@email.com'
+  // Change this to your email address
+  emailaddress: 'your@email.com' 
 });
